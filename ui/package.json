@@ -7,7 +7,7 @@
     "lint": "eslint src",
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill test/*.js"
   },
-  "author": "You <you@example.com>",
+  "author": "magiceddy",
   "devDependencies": {
     "babel-core": "^6.8.0",
     "babel-eslint": "^6.0.4",
@@ -39,6 +39,16 @@
     "lodash": "^4.11.1",
     "playground": "file:../protocol",
     "react": "^15.0.2",
-    "react-dom": "^15.0.2"
+    "react-dom": "^15.0.2",
+    "flexboxgrid": "^6.3.0",
+    "immutable": "^3.8.1",
+    "lodash": "^4.11.1",
+    "material-ui": "^0.15.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.5.2",
+    "react-router-redux": "^4.0.5",
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.5.2",
+    "redux-form": "^5.3.1"
   }
 }
