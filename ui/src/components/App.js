@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-import '../../vendor/bootstrap/css/bootstrap.min.css';
-import '../../vendor/bootstrap/css/bootstrap-theme.min.css';
-
 export default class App extends Component {
   static get propTypes() {
     return {
