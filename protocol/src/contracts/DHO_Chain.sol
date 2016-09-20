@@ -1,5 +1,8 @@
 pragma solidity ^0.4.0;
 
+import 'Organization.sol';
+
+
 /** @title Create DHO_Chain. */
 contract DHO_Chain {
 
@@ -9,14 +12,13 @@ contract DHO_Chain {
 	//Collect all organizations in DHO_Chain
 	mapping ( uint => Organization ) organitations;
 
-	struct Organization {
-		string name;
-		uint balance;
-	}
-
-
 	/** @dev Create new organization.
 	  * @param retifiers List of organization retifiers
 	 */
-	function newOrganization()
+	function registerOrganization() returns ( uint organizationID ) {
+		organizationID = numOrganizations++;
+		organizations[ organizationID ] = Organization( msg.sender );
+
+		return organizationID;
+	}
 }

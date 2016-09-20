@@ -1,12 +1,16 @@
-/* contract DHO_ChainInterface {
+pragma solidity ^0.4.0;
 
-	// All Organitations in DHO_Chain
-	Organization[] public organitazions;
+contract DHO_ChainInterface {
 
-	// Restrict to only Retifield 
-	modifier onlyRatifiers {}
+	//number of organizations in DHO_Chain
+	uint numOrganizations;
 
-	function newOrganization( 
-		String _organiziationName 
-	) returns ( bool );
-} */
+	//Collect all organizations in DHO_Chain
+	mapping ( uint => Organization ) organitations;
+
+	///@dev This function is used to register a new organization 
+	function registerOrganization( 
+		String _organiziationName,
+		uint balance 
+	) returns ( uint organizationID );
+}
